@@ -3,7 +3,7 @@ from .widgets.claus_button import ClausButton as ClausButton
 from .widgets.claus_checkbox import ClausCheckbox as ClausCheckbox
 from .widgets.claus_label import ClausLabel as ClausLabel
 from .widgets.claus_line_edit import ClausLineEdit as ClausLineEdit
-from .widgets.claus_radio_button import ClausRadioButton as ClausRadioButton
+from .widgets.claus_radiobutton import ClausRadiobutton as ClausRadiobutton
 from .widgets.claus_rounded_button import ClausRoundedButton as ClausRoundedButton
 from .widgets.claus_slider import ClausSlider as ClausSlider
 from .widgets.claus_text_edit import ClausTextEdit as ClausTextEdit

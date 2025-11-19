@@ -1,7 +1,7 @@
 import tkinter as tk
 
 
-class ClausRadioButton(tk.Radiobutton):
+class ClausRadiobutton(tk.Radiobutton):
     def __init__(self, master, **kwargs):
         defaults = {
             "bg": master.avg_color,

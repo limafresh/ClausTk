@@ -25,23 +25,26 @@ line_edit = claustk.ClausLineEdit(frame)
 line_edit.pack(padx=10, pady=10, side="bottom")
 line_edit.insert("end", "Hello!")
 
-frame2 = claustk.ClausFrame(root, background="christmas_trees", bg_blur=10)
+frame2 = claustk.ClausFrame(root)
 frame2.pack(padx=10, pady=10, side="left", fill="both", expand=True)
 
-radio_button = claustk.ClausRadioButton(frame2)
-radio_button.pack(padx=10, pady=10)
+blured_frame = claustk.ClausFrame(frame2, bg_blur=20)
+blured_frame.pack(padx=10, pady=10)
 
-radio_button2 = claustk.ClausRadioButton(frame2)
-radio_button2.pack(padx=10, pady=10)
+radiobutton = claustk.ClausRadiobutton(blured_frame)
+radiobutton.pack(padx=10, pady=10)
 
-info_label = claustk.ClausLabel(frame2, text="Yes, you can blur the background in ClausTk")
+radiobutton2 = claustk.ClausRadiobutton(blured_frame)
+radiobutton2.pack(padx=10, pady=10)
+
+info_label = claustk.ClausLabel(blured_frame, text="Yes, you can blur the background in ClausTk")
 info_label.pack(padx=10, pady=10)
 
 text_edit = claustk.ClausTextEdit(frame2)
 text_edit.pack(padx=10, pady=10)
 
 frame3 = claustk.ClausFrame(root, background="snowflakes")
-frame3.pack(padx=10, pady=10, side="right", fill="y")
+frame3.pack(padx=10, pady=10, side="right")
 
 label2 = claustk.ClausLabel(frame3)
 label2.pack(padx=10, pady=10)

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>ClausButton - ClausTk Documentation</title>
+		<title>ClausWindow - ClausTk Documentation</title>
 
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
@@ -34,15 +34,15 @@
 
 		<article>
 			<header>
-				<h1>ClausButton</h1>
+				<h1>ClausRoundedButton</h1>
 			</header>
 			<pre>
 				<code class="language-python">
 def click_btn():
     print("Merry Christmas!")
 
-button = claustk.ClausButton(root, text="Click Me!", command=click_btn)
-button.pack(padx=10, pady=10)
+rounded_button = claustk.ClausRoundedButton(root, text="Click Me!", command=click_btn)
+rounded_button.pack(padx=10, pady=10)
 				</code>
 			</pre>
 
@@ -55,11 +55,49 @@ button.pack(padx=10, pady=10)
 				</thead>
 				<tbody>
 					<tr>
-						<td><i>Same arguments as tkinter.Button</i></td>
-						<td></td>
+						<td><b>width</b></td>
+						<td>int value in px, for example, <code>width=250</code></td>
+					</tr>
+					<tr>
+						<td><b>height</b></td>
+						<td>int value in px, for example, <code>height=50</code></td>
+					</tr>
+					<tr>
+						<td><b>text</b></td>
+						<td>str, text for button</td>
+					</tr>
+					<tr>
+						<td><b>font</b></td>
+						<td>int (for example, <code>font=20</code>) or tuple (for example, <code>font=("Arial", 20)</code>)</td>
+					</tr>
+					<tr>
+						<td><b>radius</b></td>
+						<td>radius of rounding, int value</td>
+					</tr>
+					<tr>
+						<td><b>bg_color</b></td>
+						<td>str, button background color, for example <code>bg_color="red"</code> or <code>bg_color="#f0f0f0"</code></td>
+					</tr>
+					<tr>
+						<td><b>fg_color</b></td>
+						<td>str, button text color</td>
+					</tr>
+					<tr>
+						<td><b>command</b></td>
+						<td>button command</td>
+					</tr>
+					<tr>
+						<td><b>cursor</b></td>
+						<td>str, button cursor, by default <code>cursor="hand2"</code></td>
 					</tr>
 				</tbody>
 			</table>
+
+			<h2>Methods</h2>
+			<ul>
+				<li><b>.config()</b></li>
+				<li><b>.cget()</b></li>
+			</ul>
 		</article>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

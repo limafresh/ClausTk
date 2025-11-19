@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>ClausButton - ClausTk Documentation</title>
+		<title>ClausCheckbox - ClausTk Documentation</title>
 
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
@@ -34,15 +34,12 @@
 
 		<article>
 			<header>
-				<h1>ClausButton</h1>
+				<h1>ClausCheckbox</h1>
 			</header>
 			<pre>
 				<code class="language-python">
-def click_btn():
-    print("Merry Christmas!")
-
-button = claustk.ClausButton(root, text="Click Me!", command=click_btn)
-button.pack(padx=10, pady=10)
+checkbox = claustk.ClausCheckbox(root)
+checkbox.pack(padx=10, pady=10)
 				</code>
 			</pre>
 
@@ -55,7 +52,7 @@ button.pack(padx=10, pady=10)
 				</thead>
 				<tbody>
 					<tr>
-						<td><i>Same arguments as tkinter.Button</i></td>
+						<td><i>Same arguments as tkinter.Checkbutton</i></td>
 						<td></td>
 					</tr>
 				</tbody>
