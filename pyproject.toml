@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claustk"
+version = "0.1.0"
+authors = [
+  {name = "limafresh", email = "173814432+limafresh@users.noreply.github.com"},
+]
+description = "Library for creating New Year and Christmas interfaces on Tkinter"
+readme = {file = "README.txt", content-type = "text/markdown"}
+license = "Unlicense"
+license-files = ["UNLICENSE"]
+keywords = ["gui", "tkinter"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python",
+  "Topic :: Software Development :: User Interfaces"
+]
+
+[project.urls]
+Documentation = "https://limafresh.github.io/ClausTk"
+Repository = "https://github.com/limafresh/ClausTk.git"
+Issues = "https://github.com/limafresh/ClausTk/issues"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["F", "E", "W", "I", "N"]
+
+[tool.ruff.format]
+quote-style = "double"
