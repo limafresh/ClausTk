@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "claustk"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   {name = "limafresh", email = "173814432+limafresh@users.noreply.github.com"},
 ]
