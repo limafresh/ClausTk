@@ -6,7 +6,7 @@
 
 🎄🎁✨ClausTk is a library for creating New Year and Christmas interfaces using Tkinter.
 
-**Documentation** ➡️ https://limafresh.github.com/ClausTk
+**Documentation** ➡️ https://limafresh.github.io/ClausTk
 
 ![Screenshot](https://raw.githubusercontent.com/limafresh/ClausTk/main/docs/screenshots/screenshot.png)
 
