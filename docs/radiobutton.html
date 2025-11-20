@@ -16,19 +16,19 @@
 		<nav>
 			<h2>Widgets and classes</h2>
 			<ul>
-				<li><a href="claus_window.html">ClausWindow</a></li>
-				<li><a href="claus_toplevel.html">ClausToplevel</a></li>
-				<li><a href="claus_button.html">ClausButton</a></li>
-				<li><a href="claus_rounded_button.html">ClausRoundedButton</a></li>
-				<li><a href="claus_label.html">ClausLabel</a></li>
-				<li><a href="claus_checkbox.html">ClausCheckbox</a></li>
-				<li><a href="claus_radio_button.html">ClausRadioButton</a></li>
-				<li><a href="claus_frame.html">ClausFrame</a></li>
-				<li><a href="claus_line_edit.html">ClausLineEdit</a></li>
-				<li><a href="claus_text_edit.html">ClausTextEdit</a></li>
-				<li><a href="claus_slider.html">ClausSlider</a></li>
-				<li><a href="claus_image_widget">ClausImageWidget</a></li>
-				<li><a href="claus_menu_bar">ClausMenuBar</a></li>
+				<li><a href="window.html">ClausWindow</a></li>
+				<li><a href="toplevel.html">ClausToplevel</a></li>
+				<li><a href="button.html">ClausButton</a></li>
+				<li><a href="rounded-button.html">ClausRoundedButton</a></li>
+				<li><a href="label.html">ClausLabel</a></li>
+				<li><a href="checkbox.html">ClausCheckbox</a></li>
+				<li><a href="radiobutton.html">ClausRadioButton</a></li>
+				<li><a href="frame.html">ClausFrame</a></li>
+				<li><a href="line-edit.html">ClausLineEdit</a></li>
+				<li><a href="text-edit.html">ClausTextEdit</a></li>
+				<li><a href="slider.html">ClausSlider</a></li>
+				<li><a href="image-widget.html">ClausImageWidget</a></li>
+				<li><a href="menu.html">ClausMenu</a></li>
 			</ul>
 		</nav>
 
@@ -38,8 +38,13 @@
 			</header>
 			<pre>
 				<code class="language-python">
-radiobutton = claustk.ClausRadiobutton(root)
+rb_choice = claustk.IntVar(value=1)
+
+radiobutton = claustk.ClausRadiobutton(root, text="ClausRadiobutton 1", variable=rb_choice, value=1)
 radiobutton.pack(padx=10, pady=10)
+
+radiobutton2 = claustk.ClausRadiobutton(root, text="ClausRadiobutton 2", variable=rb_choice, value=2)
+radiobutton2.pack(padx=10, pady=10)
 				</code>
 			</pre>
 

@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Home - ClausTk Documentation</title>
+		<title>ClausTextEdit - ClausTk Documentation</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 	</head>
 	<body>
 
@@ -28,6 +31,36 @@
 				<li><a href="menu.html">ClausMenu</a></li>
 			</ul>
 		</nav>
+
+		<article>
+			<header>
+				<h1>ClausTextEdit</h1>
+			</header>
+			<pre>
+				<code class="language-python">
+text_edit = claustk.ClausTextEdit(root)
+text_edit.pack(padx=10, pady=10)
+				</code>
+			</pre>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Argument</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><i>Same arguments as tkinter.Text</i></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 
 	</body>
 </html>

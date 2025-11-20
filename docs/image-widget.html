@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ClausImageWidget - ClausTk Documentation</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+	</head>
+	<body>
+
+		<header>
+			<h1><a href="index.html">ClausTk Documentation</a></h1>
+		</header>
+
+		<nav>
+			<h2>Widgets and classes</h2>
+			<ul>
+				<li><a href="window.html">ClausWindow</a></li>
+				<li><a href="toplevel.html">ClausToplevel</a></li>
+				<li><a href="button.html">ClausButton</a></li>
+				<li><a href="rounded-button.html">ClausRoundedButton</a></li>
+				<li><a href="label.html">ClausLabel</a></li>
+				<li><a href="checkbox.html">ClausCheckbox</a></li>
+				<li><a href="radiobutton.html">ClausRadioButton</a></li>
+				<li><a href="frame.html">ClausFrame</a></li>
+				<li><a href="line-edit.html">ClausLineEdit</a></li>
+				<li><a href="text-edit.html">ClausTextEdit</a></li>
+				<li><a href="slider.html">ClausSlider</a></li>
+				<li><a href="image-widget.html">ClausImageWidget</a></li>
+				<li><a href="menu.html">ClausMenu</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<header>
+				<h1>ClausImageWidget</h1>
+			</header>
+			<pre>
+				<code class="language-python">
+image_widget = claustk.ClausImageWidget(root, image_path="img.png")
+image_widget.pack(padx=10, pady=10)
+				</code>
+			</pre>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Argument</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>image_path</b></td>
+						<td>str, path to image file</td>
+					</tr>
+					<tr>
+						<td><b>image_size</b></td>
+						<td>Default is 1, the higher the value, the larger the widget and image size.</td>
+					</tr>
+					<tr>
+						<td><i>Other tkinter.Canvas arguments</i></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Methods</h2>
+			<ul>
+				<li><b>.load_image()</b></li>
+				<pre><code class="language-python">image_widget.load_image("new_image.png")</code></pre>
+			</ul>
+		</article>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+	</body>
+</html>

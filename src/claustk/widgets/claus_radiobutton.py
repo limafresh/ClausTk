@@ -6,6 +6,7 @@ class ClausRadiobutton(tk.Radiobutton):
         defaults = {
             "bg": master.avg_color,
             "fg": master.contrast_color,
+            "selectcolor": master.avg_color,
             "text": "ClausRadioButton",
             "font": ("Arial, 11"),
             "highlightthickness": 0,

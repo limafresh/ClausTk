@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ClausToplevel - ClausTk Documentation</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+	</head>
+	<body>
+
+		<header>
+			<h1><a href="index.html">ClausTk Documentation</a></h1>
+		</header>
+
+		<nav>
+			<h2>Widgets and classes</h2>
+			<ul>
+				<li><a href="window.html">ClausWindow</a></li>
+				<li><a href="toplevel.html">ClausToplevel</a></li>
+				<li><a href="button.html">ClausButton</a></li>
+				<li><a href="rounded-button.html">ClausRoundedButton</a></li>
+				<li><a href="label.html">ClausLabel</a></li>
+				<li><a href="checkbox.html">ClausCheckbox</a></li>
+				<li><a href="radiobutton.html">ClausRadioButton</a></li>
+				<li><a href="frame.html">ClausFrame</a></li>
+				<li><a href="line-edit.html">ClausLineEdit</a></li>
+				<li><a href="text-edit.html">ClausTextEdit</a></li>
+				<li><a href="slider.html">ClausSlider</a></li>
+				<li><a href="image-widget.html">ClausImageWidget</a></li>
+				<li><a href="menu.html">ClausMenu</a></li>
+			</ul>
+		</nav>
+
+		<article>
+			<header>
+				<h1>ClausToplevel</h1>
+			</header>
+			<pre>
+				<code class="language-python">
+def open_toplevel():
+    toplevel = claustk.ClausToplevel()
+
+open_toplevel_btn = claustk.ClausButton(root, text="Open ClausToplevel", command=open_toplevel)
+open_toplevel_btn.pack(padx=10, pady=10)
+				</code>
+			</pre>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Argument</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>background</b></td>
+						<td>str, by default <code class="language-python">background="christmas_trees"</code>. Also available are "deer", "gifts", "santa_clauses", "snowflakes", "stars".</td>
+					</tr>
+					<tr>
+						<td><b>bg_fragmentation</b></td>
+						<td>Pattern fragmentation, int, defaults to 3.</td>
+					</tr>
+					<tr>
+						<td><b>bg_blur</b></td>
+						<td>int, the larger the number, the greater the blur.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Methods</h2>
+			<ul>
+				<li><b>.seticon()</b></li>
+				<p>A universal way to add an icon to a window. A .png file is required.</p>
+				<pre><code class="language-python">toplevel.seticon("my-icon.png")</code></pre>
+				<li><b>.title()</b></li>
+				<li><b>.geometry()</b></li>
+				<li><b>.cget()</b></li>
+			</ul>
+
+			<h2>Useful variables</h2>
+			<ul>
+				<li><b>avg_color</b></li>
+				<p>Average background color. For example, <code>print(toplevel.avg_color)</code></p>
+				<li><b>contrast_color</b></li>
+				<p>A contrasting color relative to the average background color. For example, <code>print(toplevel.contrast_color)</code></p>
+			</ul>
+		</article>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+	</body>
+</html>
