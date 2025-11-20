@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Home - ClausTk Documentation</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
 	</head>
 	<body>
 
@@ -28,6 +30,47 @@
 				<li><a href="menu.html">ClausMenu</a></li>
 			</ul>
 		</nav>
+
+		<h2>About ClausTk</h2>
+		<p>ClausTk is a library for creating New Year and Christmas interfaces using Tkinter.</p>
+
+		<h2>Screenshots and code examples</h2>
+
+		<h3>Universal example</h3>
+		<img src="screenshots/screenshot.png" alt="Screenshot">
+		<pre><code id="examplePy" class="language-python"></code></pre>
+		
+		<h3>Calculator example</h3>
+		<img src="screenshots/calculator.png" alt="Screenshot">
+		<pre><code id="calculatorPy" class="language-python"></code></pre>
+		
+		<h3>Simple example</h3>
+		<img src="screenshots/simple.png" alt="Screenshot">
+		<pre><code id="simplePy" class="language-python"></code></pre>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+		<script>
+			fetch('examples/example.py')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('examplePy').textContent = data;
+					Prism.highlightElement(document.getElementById('examplePy'));
+				});
+			fetch('examples/calculator.py')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('calculatorPy').textContent = data;
+					Prism.highlightElement(document.getElementById('calculatorPy'));
+				});
+			fetch('examples/simple_example.py')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('simplePy').textContent = data;
+					Prism.highlightElement(document.getElementById('simplePy'));
+				});
+		</script>
 
 	</body>
 </html>

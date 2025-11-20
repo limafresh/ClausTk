@@ -25,6 +25,9 @@ Documentation = "https://limafresh.github.io/ClausTk"
 Repository = "https://github.com/limafresh/ClausTk.git"
 Issues = "https://github.com/limafresh/ClausTk/issues"
 
+[tool.setuptools.package-data]
+claustk = ["widgets/assets/*.png"]
+
 [tool.ruff]
 line-length = 120
 
