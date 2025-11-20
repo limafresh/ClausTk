@@ -9,7 +9,7 @@ authors = [
   {name = "limafresh", email = "173814432+limafresh@users.noreply.github.com"},
 ]
 description = "Library for creating New Year and Christmas interfaces on Tkinter"
-readme = {file = "README.txt", content-type = "text/markdown"}
+readme = {file = "README.md", content-type = "text/markdown"}
 license = "Unlicense"
 license-files = ["UNLICENSE"]
 keywords = ["gui", "tkinter"]
