@@ -1,5 +1,7 @@
 import tkinter as tk
 
+from PIL import Image, ImageTk
+
 
 class ClausRoundedButton(tk.Canvas):
     def __init__(
@@ -8,7 +10,7 @@ class ClausRoundedButton(tk.Canvas):
         width=150,
         height=30,
         text="ClausRoundedButton",
-        font=None,
+        font=("Arial", 11),
         radius=13,
         bg_color="green",
         fg_color="white",
@@ -21,7 +23,6 @@ class ClausRoundedButton(tk.Canvas):
             master,
             width=width,
             height=height,
-            bg=master.avg_color,
             highlightthickness=0,
             **kwargs,
         )
@@ -37,9 +38,28 @@ class ClausRoundedButton(tk.Canvas):
         self.cursor = cursor
 
         self.delete("all")
+
         self._create_button()
 
+        self.bind("<Configure>", self._create_bg)
         self.bind("<ButtonRelease-1>", self._on_release)
+
+    def _create_bg(self, event=None):
+        self.delete("btn_bg")
+
+        w, h = self.master.winfo_width(), self.master.winfo_height()
+        full_bg = Image.new("RGB", (w, h))
+        bw, bh = self.master._background.width, self.master._background.height
+        for x in range(0, w, bw):
+            for y in range(0, h, bh):
+                full_bg.paste(self.master._background, (x, y))
+
+        x, y, w, h = self.winfo_x(), self.winfo_y(), self.winfo_width(), self.winfo_height()
+        cropped = full_bg.crop((x, y, x + w, y + h))
+        self.bg_piece = ImageTk.PhotoImage(cropped)
+
+        self.create_image(0, 0, image=self.bg_piece, anchor="nw", tags="btn_bg")
+        self.tag_lower("btn_bg")
 
     def _create_button(self):
         r, w, h = self.radius, self.width, self.height

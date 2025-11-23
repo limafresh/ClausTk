@@ -19,7 +19,6 @@ def press(key):
 
 root = claustk.ClausWindow(background="gifts")
 root.title("Calculator")
-root.geometry("250x320")
 
 line_edit = claustk.ClausLineEdit(root, font=(None, 15), justify="right")
 line_edit.pack(fill="x", padx=5, pady=20)

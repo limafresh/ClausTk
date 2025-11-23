@@ -6,6 +6,7 @@ def click_btn():
 
 
 root = claustk.ClausWindow()
+root.geometry("300x200")
 
 button = claustk.ClausRoundedButton(root, text="Click me!", command=click_btn)
 button.pack(padx=10, pady=10)

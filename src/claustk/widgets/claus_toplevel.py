@@ -3,9 +3,9 @@ import sys
 import tempfile
 import tkinter as tk
 
-from PIL import Image, ImageTk
+from PIL import Image
 
-from .claus_background_canvas import ClausBackgroundCanvas
+from .claus_frame import ClausFrame
 
 
 def _resource(relative_path):
@@ -13,20 +13,13 @@ def _resource(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-class ClausToplevel(ClausBackgroundCanvas):
-    def __init__(self, background: str = "christmas_trees", bg_fragmentation: int = 3, **kwargs):
+class ClausToplevel(ClausFrame):
+    def __init__(self, **kwargs):
         self._master = tk.Toplevel()
         self._master.title("ClausToplevel")
-        self._master.geometry("400x250")
 
         super().__init__(self._master, **kwargs)
         self.pack(fill="both", expand=True)
-
-        _background = Image.open(_resource(f"assets/{background}.png"))
-        self._background = _background.resize(
-            (int(_background.width / bg_fragmentation), int(_background.height / bg_fragmentation))
-        )
-        self._background_tk = ImageTk.PhotoImage(self._background)
 
         self.seticon(_resource("assets/icon.png"))
 
@@ -40,19 +33,9 @@ class ClausToplevel(ClausBackgroundCanvas):
             img.save(ico_path, format="ICO", sizes=[(16, 16), (32, 32), (48, 48), (256, 256)])
 
             self._master.iconbitmap(ico_path)
+            os.remove(ico_path)
         else:
             self._master.iconphoto(True, tk.PhotoImage(file=file_path))
 
-    def title(self, value: str):
-        self._master.title(value)
-
-    def geometry(self, value: str):
-        self._master.geometry(value)
-
-    def cget(self, key):
-        if key == "width":
-            return self._master.width
-        elif key == "height":
-            return self._master.height
-        else:
-            raise KeyError(f"Unknown option: '{key}'")
+    def __getattr__(self, name):
+        return getattr(self._master, name)

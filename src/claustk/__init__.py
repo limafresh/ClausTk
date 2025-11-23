@@ -1,8 +1,8 @@
 import tkinter as tk
 
-from .widgets.claus_background_canvas import ClausBackgroundCanvas as ClausFrame  # noqa: F401
 from .widgets.claus_button import ClausButton as ClausButton
 from .widgets.claus_checkbox import ClausCheckbox as ClausCheckbox
+from .widgets.claus_frame import ClausFrame as ClausFrame
 from .widgets.claus_image_widget import ClausImageWidget as ClausImageWidget
 from .widgets.claus_label import ClausLabel as ClausLabel
 from .widgets.claus_line_edit import ClausLineEdit as ClausLineEdit
