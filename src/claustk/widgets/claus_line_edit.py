@@ -4,7 +4,7 @@ import tkinter as tk
 class ClausLineEdit(tk.Entry):
     def __init__(self, master, **kwargs):
         defaults = {
-            "font": ("Arial, 11"),
+            "font": ("Arial", 11),
             "highlightthickness": 0,
         }
         defaults.update(kwargs)

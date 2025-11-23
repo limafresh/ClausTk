@@ -7,7 +7,7 @@ class ClausCheckbox(tk.Checkbutton):
             "bg": master.avg_color,
             "fg": master.contrast_color,
             "text": "ClausCheckBox",
-            "font": ("Arial, 11"),
+            "font": ("Arial", 11),
             "highlightthickness": 0,
         }
         defaults.update(kwargs)

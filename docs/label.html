@@ -38,7 +38,7 @@
 			</header>
 			<pre>
 				<code class="language-python">
-label = claustk.ClausLabel(root, text="This is label")
+label = claustk.ClausLabel(root, text="This is label.")
 label.pack(padx=10, pady=10)
 				</code>
 			</pre>
@@ -52,11 +52,49 @@ label.pack(padx=10, pady=10)
 				</thead>
 				<tbody>
 					<tr>
-						<td><i>Same arguments as tkinter.Label</i></td>
+						<td><b>width</b></td>
+						<td>int value in px, for example, <code class="language-python">width=250</code></td>
+					</tr>
+					<tr>
+						<td><b>height</b></td>
+						<td>int value in px, for example, <code class="language-python">height=50</code></td>
+					</tr>
+					<tr>
+						<td><b>text</b></td>
+						<td>str, label text</td>
+					</tr>
+					<tr>
+						<td><b>font</b></td>
+						<td>tuple, for example, <code class="language-python">font=("Arial", 20)</code></td>
+					</tr>
+					<tr>
+						<td><b>justify</b></td>
+						<td>str, "center", "left", "right"</code></td>
+					</tr>
+					<tr>
+						<td><b>bg_color</b></td>
+						<td>str, label background color, for example <code class="language-python">bg_color="red"</code> or <code class="language-python">bg_color="#f0f0f0"</code> or <code class="language-python">bg_color="transparent"</code> (by default)</td>
+					</tr>
+					<tr>
+						<td><b>fg_color</b></td>
+						<td>str, label text color</td>
+					</tr>
+					<tr>
+						<td><b>cursor</b></td>
+						<td>str, label cursor</td>
+					</tr>
+					<tr>
+						<td><i>Other tkinter.Canvas arguments</i></td>
 						<td></td>
 					</tr>
 				</tbody>
 			</table>
+
+			<h2>Methods</h2>
+			<ul>
+				<li><b>.config()</b></li>
+				<li><b>.cget()</b></li>
+			</ul>
 		</article>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>

@@ -6,7 +6,7 @@ class ClausTextEdit(tk.Text):
         defaults = {
             "width": 40,
             "height": 5,
-            "font": ("Arial, 11"),
+            "font": ("Arial", 11),
             "highlightthickness": 0,
         }
         defaults.update(kwargs)
